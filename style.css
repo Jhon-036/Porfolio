@@ -21,6 +21,7 @@ header {
     width: 100%;
     height: 6rem;
     position: absolute;
+    z-index: 1;
 }
 
 .menu {
@@ -59,7 +60,39 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    left: 56%;
+    top: 22%;
+    box-shadow: 
+        inset 0 0 30px 0 #fff, 
+        inset 20px 0 30px #ffd400, 
+        inset -20px 0 30px red, 
+        inset 20px 0 300px #ff40d6, 
+        inset -20px 0 300px #e3ff4b, 
+        0 0 50px #fff, 
+        -10px 0 100px #fbff00, 
+        10px 0 80px #f55;
+    animation-name: movimiento;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform; /* will-change mejora el rendimiento */
+}
+@keyframes movimiento {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(15%); }
+    100% { transform: translateX(0); }
+}
+
+/* inicio */
 
 .text_inicio {
     text-align: center;
@@ -69,6 +102,7 @@ header {
 .text_inicio h1 {
     font-size: 150px;
     color: var(--color2);
+    text-shadow: 0px 0px 0.2em rgba(0, 0, 0, 0.700)
 }
 
 .text_inicio p {

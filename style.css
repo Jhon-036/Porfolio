@@ -28,7 +28,7 @@ header {
     width: 100%;
     height: 6rem;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
 }
 
 .menu {
@@ -45,6 +45,12 @@ header {
     font-family: 'Roboto Mono', sans-serif;
 }
 
+.menu_container ul{
+    width: 36rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .menu_logo a {
     display: flex;
     font-size: 30px;
@@ -52,7 +58,31 @@ header {
 
 .menu_container a {
     color: var(--color2);
-    margin: 0 0 0 60px;
+}
+
+header.below {
+    position: fixed;
+    background-color: #1a191dc2;
+    height: 3rem;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    animation-name: animacion_menu;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    will-change: transform;
+}
+
+@keyframes animacion_menu {
+    0% { transform: translateY(-80px); }
+    100% { transform: translateX(0); }
+}
+
+.menu_logo.below {
+    display: none;
+}
+
+.menu.below {
+    justify-content: center;
 }
 
 /* inicio */
@@ -123,7 +153,7 @@ header {
 
 .text_home p {
     font-size: 20px;
-    color: var(--color3);
+    color: var(--color2);
 }
 
 /* sobre mi */
@@ -155,6 +185,7 @@ header {
 }
 
 .about_me_button {
+    padding: 20px;
     margin: 40px 0;
 }
 
@@ -169,13 +200,35 @@ header {
     text-decoration: none;
 }
 
-.about_me_img {
-    margin: auto;
-    width: 80%;
-    padding: 40px;
+.skills {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
-.about_me_container img {
-    width: 100%;
-    height: 100%;
+.front_end, .date_base, .deploy {
+    width: 320px;
+    height: 250px;
+    font-family: 'Roboto mono', sans-serif;
+    color: var(--color2);
+    border: 2px var(--color3) solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.front_end p, .date_base p, .deploy p {
+    padding: 0;
+}
+
+.deploy_title h2, .date_base_title h2, .front_end_title h2 {
+    width: 70%;
+}
+
+.deploy_title, .date_base_title, .front_end_title {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

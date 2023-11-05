@@ -8,12 +8,11 @@
 
 :root {
     --textFont: 'Roboto Mono', sans-serif;
-    --color1 : #1A191D;  /* fondo */
-    --color2 : #ffff;   /* letras */
-    --color3 : #A3A3A3; /* spam - subtitulos */
-    --color4 : #6DE8FC; /* menu - span*/
-    --color5 : #BB77FE; /* botones - span */
-
+    --color1: #1A191D;
+    --color2: #FFFF;
+    --color3: #A3A3A3;
+    --color4: #6DE8FC;
+    --color5: #bb77fe;
 }
 
 /* scrooll animation */
@@ -24,290 +23,156 @@ html {
 
 /* menu */
 
-header {
-    width: 100%;
-    height: 6rem;
+.menu {
     position: absolute;
-    z-index: 10;
+    width: 100%;
+    height: 5rem;
 }
 
-.menu {
-    width: 65%;
+.menu_container {
+    width: 80%;
     height: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.menu_logo a, .menu_container a {
-    text-decoration: none;
-    font-family: 'Roboto Mono', sans-serif;
-    
-}
-
-.menu_container ul{
-    width: 36rem;
-    display: flex;
-    justify-content: space-between;
-
 }
 
 .menu_logo a {
-    display: flex;
-    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Roboto mono', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color5);
 }
 
-.menu_container a {
+.menu_item a {
+    text-decoration: none;
     color: var(--color2);
+    font-family: 'Roboto mono', sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 50px;
 }
 
-header.below {
-    position: fixed;
-    background-color: #1a191dc2;
-    height: 3rem;
-    backdrop-filter: blur(10px);
-    justify-content: center;
-    animation-name: animacion_menu;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    will-change: transform;
-}
-
-@keyframes animacion_menu {
-    0% { transform: translateY(-80px); }
-    100% { transform: translateX(0); }
-}
-
-.menu_logo.below {
+.btn_open, .btn_close {
     display: none;
 }
 
-.menu.below {
-    justify-content: center;
+.menu_item.visible {
+    visibility: visible;
 }
-
-
 
 /* inicio */
 
-.home {
+.inicio {
     width: 100%;
     height: 100vh;
-    background-image: url(./img/tamalsen-home-cover.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.home_background {
-    width: 100%;
-    margin: auto;
-    height: 100%;
-    display: flex;
-    /* 
-    degradado vertical
-    180deg : los colores cambiarán verticalmente. 
-    #00000012 (rgba) 60% : primer color degradado desde arriba hasta el 60% del height va contener ese color
-    #1a191d 100% : segundo color degradado desde el 60% hasta el 100% contenera ese color
-    */
-    background-image: linear-gradient(180deg,#00000012 60%,#1a191d 100%);
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.home_container {
-    width: 65%;
-    margin: auto;
-}
-
-.circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: yellow;
-    position: absolute;
-    left: 56%;
-    top: 22%;
-    box-shadow: 
-        inset 0 0 30px 0 #fff, 
-        inset 20px 0 30px #ffd400, 
-        inset -20px 0 30px red, 
-        inset 20px 0 300px #ff40d6, 
-        inset -20px 0 300px #e3ff4b, 
-        0 0 50px #fff, 
-        -10px 0 100px #fbff00, 
-        10px 0 80px #f55;
-    animation-name: movimiento;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    will-change: transform; /* will-change mejora el rendimiento */
-}
-@keyframes movimiento {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(15%); }
-    100% { transform: translateX(0); }
-}
-
-.text_home {
-    text-align: center;
-    font-family: 'Roboto Mono', sans-serif;
-}
-
-.text_home h1 {
-    font-size: 150px;
-    color: var(--color2);
-    text-shadow: 0px 0px 0.2em rgba(0, 0, 0, 0.700)
-}
-
-.text_home h1::before{
-    content: 'Hola!, Soy';
-    position: absolute;
-    font-size: 40px;
-    transform: translateY(-2rem);
-    color: var(--color4);
-}
-
-.text_home p {
-    font-size: 20px;
-    color: var(--color2);
-}
-
-.social {
-    width: 22rem;
-    margin: 2.8rem auto 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.social a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--color1);
-    border-radius: 5px;
-    padding: 10px 18px;
-    text-decoration: none;
-    transition: 0.5s;
 }
 
-.social a:hover {
-    background-color: #28282b;
-    transition: 0.5s;
-}
-
-.social a p {
-    padding: 0 0 0 10px;
-    font-size: 16px;
-}
-
-/* sobre mi */
-
-.about_me {
-    width: 100%;
-    background-color: var(--color1);;
-}
-
-.about_me_container {
-    width: 65%;
+.inicio article {
+    width: 80%;
+    height: 100%;
     margin: auto;
-    padding: 100px 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.about_me_container img {
-    width: 40%;
-    height: auto;
-}
-
-.about_me_info {
-    font-family: 'Roboto mono', sans-serif;
-    color: var(--color2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.about_me_info h1 {
-    font-size: 75px;
-    z-index: 5;
-}
-
-.about_me p {
-    width: 40rem;
-    z-index: 5;
-}
-
-.element_decoration {
-    width: 60rem;
-    position: absolute;
-    transform: translateY(24rem);
-    opacity: 0.3;
-}
-
-
-.skills {
-    width: 65%;
-    margin: auto;
-}
-
-.skills_container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.skills_item {
-    width: 220px;
-    height: 70px;
-    background-color: var(--color2);
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 4rem 2rem;
-    font-family: 'Roboto mono', sans-serif;
-}
-
-.skills_item h3 {
-    font-size: 18px;
-    padding: 0 0 0 10px;
-}
-
-.skills_item_icon img{
-    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.front_end, .date_base, .deploy {
-    width: 320px;
-    height: 250px;
-    font-family: 'Roboto mono', sans-serif;
-    color: var(--color2);
-    border: 2px var(--color3) solid;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     flex-direction: column;
-    padding: 20px;
+    gap: 10rem;
 }
 
-.front_end p, .date_base p, .deploy p {
-    padding: 0;
+.inicio_container {
+    color: var(--color2);
+    font-family: 'Roboto mono', sans-serif;
+    text-align: center;
 }
 
-.deploy_title h2, .date_base_title h2, .front_end_title h2 {
-    width: 70%;
+.inicio_container h2 {
+    font-size: 88px;
 }
 
-.deploy_title, .date_base_title, .front_end_title {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.inicio_container h2::after {
+    content: ' ';
+    position: absolute;
+    transform: translateY(77px);
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    background-color: var(--color4);
+}
+
+.inicio_container p {
+    font-size: 25px;
+}
+
+.arrow_bottom i {
+    color: var(--color4);
+    font-size: 60px;
+}
+
+
+@media (max-width : 1024px) {
+
+    .menu_item a {
+        margin-left: 45px;
+    }
+
+    .menu_logo a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width : 800px) {
+
+    .btn_open, .btn_close {
+        display: block;
+        font-size: 24px;
+    }
+    
+    .menu_item {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--color1);
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn_close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 40px;
+    }
+
+    .menu_item a{
+        padding: 25px;
+        margin: 0 0 20px 0;
+        font-size: 18px;
+    }
+
+    
+    .inicio_container h2 {
+        font-size: 70px;
+    }
+
+    .inicio_container h2::after {
+        width: 12px;
+        height: 12px;
+        transform: translateY(63px);
+    }
+
+    .inicio_container p {
+        font-size: 20px;
+    }
+
+    .arrow_bottom i {
+        font-size: 40px;
+    }
 }

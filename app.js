@@ -1,11 +1,12 @@
 /* menu */
-let header = document.querySelector("header")
-let logo = document.querySelector("#menu_logo")
-let menu = document.querySelector("#menu")
+const nav = document.querySelector("#menu_item")
+const open = document.querySelector("#btn_open")
+const close = document.querySelector("#btn_close")
 
-window.addEventListener("scroll", function(){
-    header.classList.toggle("below",this.window.scrollY > 150)
-    logo.classList.toggle("below",this.window.scrollY > 150)
-    menu.classList.toggle("below",this.window.scrollY > 150)
+open.addEventListener("click", () => {
+    nav.classList.add("visible")
 })
 
+close.addEventListener("click", () => {
+    nav.classList.remove("visible")
+})

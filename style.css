@@ -74,7 +74,7 @@ html {
     background-color: var(--color1);
 }
 
-.inicio article {
+.inicio_article {
     width: 80%;
     height: 100%;
     margin: auto;
@@ -142,7 +142,44 @@ html {
 /* about me */
 
 .about_me {
+    width: 100%;
+    background-color: var(--color1);
+}
 
+.about_me_article {
+    width: 80%;
+    margin: auto;
+}
+
+.about_me_container {
+    padding-top: 4rem;
+    text-align: center;
+    font-family: 'Roboto mono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about_me_container h1 {
+    color: var(--color4);
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.about_me_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about_me_info p {
+    color: var(--color2);
+}
+
+.about_me_info img {
+    width: 400px;
 }
 
 @media (max-width : 1024px) {

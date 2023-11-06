@@ -68,6 +68,9 @@ html {
 .inicio {
     width: 100%;
     height: 100vh;
+    background-image: url(img/bk2_hero.svg);
+    background-size: cover;
+    background-position: center;
     background-color: var(--color1);
 }
 
@@ -79,7 +82,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10rem;
+    gap: 1rem;
 }
 
 .inicio_container {
@@ -106,11 +109,41 @@ html {
     font-size: 25px;
 }
 
+.arrow_bottom {
+    margin-top: 3rem;
+    animation: animation_arrow alternate infinite .8s ease-in;
+}
+
+@keyframes animation_arrow {
+    0% {transform: translate(0); transition: .5s;}
+    100% {transform: translateY(3rem); transition: .5s;}
+}
+
 .arrow_bottom i {
     color: var(--color4);
     font-size: 60px;
 }
 
+.red_social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.red_social i {
+    font-size: 25px;
+}
+
+/* about me */
+
+.about_me {
+
+}
 
 @media (max-width : 1024px) {
 
@@ -142,6 +175,7 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        z-index: 50;
     }
 
     .btn_close {
@@ -174,5 +208,23 @@ html {
 
     .arrow_bottom i {
         font-size: 40px;
+    }
+
+    .red_social {
+        display: none;
+    }
+}
+
+@media (max-width : 530px) {
+    .inicio_container h2 {
+        font-size: 50px;
+    }
+    .inicio_container h2::after {
+        width: 10px;
+        height: 10px;
+        transform: translateY(43px);
+    }
+    .inicio_container p {
+        font-size: 17px;
     }
 }

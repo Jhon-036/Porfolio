@@ -17,16 +17,15 @@
     <header class="menu" id="menu">
         <div class="menu_container">
             <div class="menu_logo">
-                <a href="#menu" style="display: flex;">
-                    <p style="color: #6DE8FC;">Jhon</p><span style="color: #ffff;">.</span><span
-                        style="color: #BB77FE;">Dev_</span>
+                <a href="#inicio" style="display: flex;">
+                    <img src="img/logo.png" alt="">
                 </a>
             </div>
             <div class="menu_item" id="menu_item">
-                <a href="">Inicio</a>
-                <a href="">Sobre mi</a>
-                <a href="">Proyectos</a>
-                <a href="">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#about_me">Sobre mi</a>
+                <a href="#proyect">Proyectos</a>
+                <a href="#contact">Contacto</a>
                 <div class="btn_close" id="btn_close">
                     <i class="fas fa-times" style="color: #ffff;"></i>
                 </div>
@@ -38,39 +37,69 @@
         </div>
     </header>
 
-    <section class="inicio" id="inicio">
-        <article class="inicio_article">
-            <div class="inicio_container">
-                <h2>Jhon David</h2>
-                <p>Desarrollador <span style="color: #6DE8FC;">Front End</span></p>
-            </div>
-            <div class="arrow_bottom">
-                <a href="#about_me"><i class="fas fa-angle-double-down"></i></a>
-            </div>
-            <div class="red_social">
-                <i class="fab fa-github" style="color: #6de8fc;"></i>
-                <i class="fab fa-linkedin" style="color: #6de8fc;"></i>
-                <i class="fab fa-instagram" style="color: #6de8fc;"></i>
-                <span style="width: 2px; height: 10rem; background-color: #6DE8FC; display: block;"></span>
-            </div>
-        </article>
-    </section>
+    <main>
+        <section class="inicio" id="inicio">
+            <article class="inicio_article">
+                <div class="inicio_container">
+                    <h2>Jhon David</h2>
+                    <p>Desarrollador <span style="color: #6DE8FC;">Front End</span></p>
+                </div>
+                <div class="arrow_bottom">
+                    <a href="#about_me"><i class="fas fa-angle-double-down"></i></a>
+                </div>
+                <div class="red_social">
+                    <i class="fab fa-github" style="color: #6de8fc;"></i>
+                    <i class="fab fa-linkedin" style="color: #6de8fc;"></i>
+                    <i class="fab fa-instagram" style="color: #6de8fc;"></i>
+                    <span style="width: 2px; height: 10rem; background-color: #6DE8FC; display: block;"></span>
+                </div>
+            </article>
+        </section>
 
-    <section class="about_me" id="about_me">
-        <article class="about_me_article">
-            <div class="about_me_container">
-                <h1>Sobre mi</h1>
-                <div class="about_me_info">
-                    <p>¡Hola! Soy Jhon, un apasionado desarrollador web y estudiante en constante crecimiento. Mi enfoque
-                        principal está en el desarrollo frontend full stack, donde destaco en la creación de interfaces de
-                        usuario sólidas y seguras. Mi objetivo es seguir creciendo como desarrollador, manteniéndome
-                        actualizado con las últimas tendencias y tecnologías del desarrollo web.
-                    </p>
-                    <img src="img/about_me.svg" alt="">
+        <section class="about_me" id="about_me">
+            <article class="about_me_article">
+                <div class="about_me_container">
+                    <div class="about_me_info">
+                        <h1>Sobre mi</h1>
+                        <p>¡Hola! Soy Jhon, un apasionado desarrollador web y estudiante en constante crecimiento. Mi
+                            enfoque
+                            principal está en el desarrollo frontend full stack, donde destaco en la creación de
+                            interfaces de
+                            usuario sólidas y seguras. Mi objetivo es seguir creciendo como desarrollador, manteniéndome
+                            actualizado con las últimas tendencias y tecnologías del desarrollo web.
+                        </p>
+                    </div>
+                    <div class="info_img">
+                        <img src="img/programing.png" alt="">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="proyect" id="proyect">
+            <h1>Proyectos</h1>
+            <div class="proyect_container">
+                <div class="proyect_box1">
+                    <img src="img/proyect_weather.png" alt="">
+                    <div class="proyect_boxmini">
+                        <a href="https://proyect-weather.vercel.app/" target="_blank">Visitar</a>
+                        <p>Investida los datos de tu clima!</p>
+                    </div>
+                </div>
+                <div class="proyect_box2">
+                    <img src="img/proyect_phrases.png" alt="">
+                    <div class="proyect_boxmini">
+                        <a href="https://phrases-mu.vercel.app/" target="_blank">Visitar</a>
+                        <p>Frases realizados por grandes escritores</p>
+                    </div>
                 </div>
             </div>
-        </article>
-    </section>
+        </section>
+
+        <section class="skills" id="skills">
+            
+        </section>
+    </main>
 
     <script src="./app.js"></script>
 </body>

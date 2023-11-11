@@ -25,6 +25,7 @@
                 <a href="#inicio">Inicio</a>
                 <a href="#about_me">Sobre mi</a>
                 <a href="#proyect">Proyectos</a>
+                <a href="#skills">Habilidades</a>
                 <a href="#contact">Contacto</a>
                 <div class="btn_close" id="btn_close">
                     <i class="fas fa-times" style="color: #ffff;"></i>
@@ -42,62 +43,106 @@
             <article class="inicio_article">
                 <div class="inicio_container">
                     <h2>Jhon David</h2>
-                    <p>Desarrollador <span style="color: #6DE8FC;">Front End</span></p>
+                    <p>Desarrollador <span style="color: #00ddff;">Front End</span></p>
                 </div>
                 <div class="arrow_bottom">
                     <a href="#about_me"><i class="fas fa-angle-double-down"></i></a>
                 </div>
                 <div class="red_social">
-                    <i class="fab fa-github" style="color: #6de8fc;"></i>
-                    <i class="fab fa-linkedin" style="color: #6de8fc;"></i>
-                    <i class="fab fa-instagram" style="color: #6de8fc;"></i>
-                    <span style="width: 2px; height: 10rem; background-color: #6DE8FC; display: block;"></span>
+                    <i class="fab fa-github" style="color: #00ddff;"></i>
+                    <i class="fab fa-linkedin" style="color: #00ddff;"></i>
+                    <i class="fab fa-instagram" style="color: #00ddff;"></i>
+                    <span style="width: 2px; height: 10rem; background-color: #00ddff; display: block;"></span>
                 </div>
             </article>
         </section>
 
         <section class="about_me" id="about_me">
-            <article class="about_me_article">
-                <div class="about_me_container">
-                    <div class="about_me_info">
-                        <h1>Sobre mi</h1>
-                        <p>¡Hola! Soy Jhon, un apasionado desarrollador web y estudiante en constante crecimiento. Mi
-                            enfoque
-                            principal está en el desarrollo frontend full stack, donde destaco en la creación de
-                            interfaces de
-                            usuario sólidas y seguras. Mi objetivo es seguir creciendo como desarrollador, manteniéndome
-                            actualizado con las últimas tendencias y tecnologías del desarrollo web.
-                        </p>
-                    </div>
-                    <div class="info_img">
-                        <img src="img/programing.png" alt="">
-                    </div>
+            <div class="about_me_container">
+                <div class="about_me_info">
+                    <h1>Sobre mi</h1>
+                    <p>¡Hola! Soy Jhon, un apasionado desarrollador web y estudiante en constante crecimiento. Mi
+                        enfoque
+                        principal está en el desarrollo full stack, donde destaco en la creación de
+                        interfaces de
+                        usuario sólidas y seguras. Mi objetivo es seguir creciendo como desarrollador, manteniéndome
+                        actualizado con las últimas tendencias y tecnologías del desarrollo web.
+                    </p>
                 </div>
-            </article>
+                <div class="info_img">
+                    <img src="img/programing.png" alt="">
+                </div>
+            </div>
         </section>
 
         <section class="proyect" id="proyect">
-            <h1>Proyectos</h1>
             <div class="proyect_container">
-                <div class="proyect_box1">
-                    <img src="img/proyect_weather.png" alt="">
-                    <div class="proyect_boxmini">
-                        <a href="https://proyect-weather.vercel.app/" target="_blank">Visitar</a>
-                        <p>Investida los datos de tu clima!</p>
+                <h1>Proyectos</h1>
+                <div class="proyect_container_item">
+                    <div class="proyect_item">
+                        <img src="img/proyect_weather.png" alt="">
+                        <div class="proyect_boxmini">
+                            <a href="https://proyect-weather.vercel.app/" target="_blank">Visitar</a>
+                            <p>Investiga los datos de tu clima!</p>
+                        </div>
                     </div>
-                </div>
-                <div class="proyect_box2">
-                    <img src="img/proyect_phrases.png" alt="">
-                    <div class="proyect_boxmini">
-                        <a href="https://phrases-mu.vercel.app/" target="_blank">Visitar</a>
-                        <p>Frases realizados por grandes escritores</p>
+                    <div class="proyect_item">
+                        <img src="img/proyect_phrases.png" alt="">
+                        <div class="proyect_boxmini">
+                            <a href="https://phrases-mu.vercel.app/" target="_blank">Visitar</a>
+                            <p>Frases realizados por grandes escritores</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="skills" id="skills">
-            
+            <div class="skills_container">
+                <h1>Habilidades</h1>
+                <div class="skills_container_item">
+                    <img src="img/bash.svg" alt="">
+                    <img src="img/netlify.svg" alt="">
+                    <img src="img/html.svg" alt="">
+                    <img src="img/css.svg" alt="">
+                    <img src="img/javascript.svg" alt="">
+                    <img src="img/mongodb.svg" alt="">
+                    <img src="img/git.svg" alt="">
+                    <img src="img/github.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact_container">
+                <h1>Contacto</h1>
+                <form id="form" class="contact__form">
+                    <div class="label__input">
+                      <label for="name"><i class='bx bxs-user'></i></label>
+                      <input type="text" id="name" placeholder="Nombre" name="name">
+                    </div>
+          
+                    <div class="label__input">
+                      <label for="email"><i class='bx bx-at'></i></label>
+                      <input type="email" id="email" placeholder="Correo" name="email">
+                    </div>
+          
+                    <div>
+                      <label for="message" style="color: #00ddff; font-size: 20px;" >Mensaje</label> <br>
+                      <textarea name="message" id="message" rows="10"></textarea>
+                    </div>
+          
+                    <button class="contact__btn" type="submit">Enviar</button>
+          
+                    <p class="message--success hidden">Tu mensaje se envio correctamente</p>
+                    <p class="message--error hidden">Hubo un error al enviar el mensaje</p>
+          
+                  </form>
+            </div>
+        </section>
+
+        <section class="footer">
+            <p class="footer__copy">By Jhon David &copy; 2023</p>
         </section>
     </main>
 
